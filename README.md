@@ -1,5 +1,5 @@
 # shelled
-A simple SU shell for Android
+A simple root shell for Android
 
 ---
 
