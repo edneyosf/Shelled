@@ -7,7 +7,7 @@ package com.edneyosf.shelled
 object Shelled {
 
   @JvmStatic
-  private fun run(command: String): Result {
+  fun run(command: String): Result {
     val result: CommandResult = Shell.SU.run(command)
 
     return Result(result.getStdout(), result.getStderr())
