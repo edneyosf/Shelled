@@ -10,7 +10,7 @@ object Shelled {
   fun run(command: String): Result {
     val result: CommandResult = Shell.SU.run(command)
 
-    return Result(result.getStdout(), result.getStderr())
+    return Result(result.stdout(), result.stderr())
   }
 
   class Result(private val success: String, val error: String) {

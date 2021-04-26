@@ -387,7 +387,7 @@ public class Shell {
     public static boolean available() {
       // this is only one of many ways this can be done
       CommandResult result = run(Shell.AVAILABLE_TEST_COMMANDS);
-      return Shell.parseAvailableResult(result.stdout, true);
+      return Shell.parseAvailableResult(result.getStdout(), true);
     }
 
     /**
@@ -412,7 +412,7 @@ public class Shell {
 
         CommandResult result = Shell.run(internal ? "su -V" : "su -v", "exit");
 
-        for (String line : result.stdout) {
+        for (String line : result.getStdout()) {
           if (!internal) {
             if (!line.trim().equals("")) {
               version = line;
@@ -579,7 +579,7 @@ public class Shell {
    * Command result callback, notifies the recipient of the completion of a command block, including the (last) exit
    * code, and the full output
    */
-  public interface OnCommandResultListener extends ShellExitCode {
+  public interface OnCommandResultListener {
 
     /**
      * <p>Command result callback</p>
@@ -604,7 +604,7 @@ public class Shell {
    * Command per line callback for parsing the output line by line without buffering It also notifies the recipient
    * of the completion of a command block, including the (last) exit code.
    */
-  public interface OnCommandLineListener extends ShellExitCode, StreamGobbler.OnLineListener {
+  public interface OnCommandLineListener extends StreamGobbler.OnLineListener {
 
     /**
      * <p>Command result callback</p>
