@@ -18,7 +18,7 @@ Add the dependency
 
 ```
 dependencies {
-  implementation 'com.github.edneyosf:shelled:1.0.0'
+  implementation 'com.github.edneyosf:shelled:1.0.1'
 }
 ```
 
