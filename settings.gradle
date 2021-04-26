@@ -1,0 +1,3 @@
+include ':shelled'
+include ':app'
+rootProject.name = "Shelled"
