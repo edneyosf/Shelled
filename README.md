@@ -1,4 +1,4 @@
-# shelled
+# Shelled
 A simple root shell for Android
 
 ---
