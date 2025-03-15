@@ -1,11 +1,8 @@
 # Shelled
-A simple root shell for Android
 
-[![Version](https://img.shields.io/badge/version-v1.0.1-success)]()
+[![Version](https://img.shields.io/badge/version-v1.0.1-blue)]()
 
----
-
-### Download
+## Gradle Setup
 
 Add it in your root `build.gradle` at the end of repositories:
 ```
@@ -24,9 +21,7 @@ dependencies {
 }
 ```
 
----
-
-### How do I use Shelled?
+## Usage
 
 ```
 Shelled.run("ls")
